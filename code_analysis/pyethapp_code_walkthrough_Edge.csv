@@ -1,0 +1,35 @@
+Source,Target,Type,id,label,timeset,weight
+0,1,Directed,0,try to decode packets (objects representing the equivalent to a rpc cmd),,2.0
+1,2,Directed,1,decode if there is enough data in the buffer; decrypt,,1.0
+2,1,Directed,2,using the cipher,,3.0
+1,3,Directed,3,which we have in the RLPx session,,1.0
+3,0,Directed,4,decoded packets are put in a queue which are processed by a greenlet,,1.0
+0,4,Directed,5,which was spawned by devp2p/peer.py the Peer instance which is another greenlet the protocol for handling the packet is resolved and given the packet,,5.0
+4,5,Directed,6,"in our case we assume the packet is for the ""eth"" protocol",,1.0
+5,6,Directed,7,"The ETHProtocol instance was linked to the ChainService instance on creation, which registered callbacks",,1.0
+6,4,Directed,8,which are called,,1.0
+4,5,Directed,9,after the Packet.cmd_id is resolved to a handling command class in our case eth_protocol.NewBlock which decodes the payload the registered callback function is called and handles the message,,5.0
+5,6,Directed,10,new blocks are handled by the synchronizer which knows the state of the synchronization,,1.0
+6,7,Directed,11,if the block is unknown and pow is valid and chain difficulty sufficient and we have a parent for the block the block is added to a queue,,6.0
+7,6,Directed,12,which is processed by a greenlet which pop blocks from the queue and tries to add them to the chain.,,4.0
+6,4,Directed,13,it is now deserialized to a block.Block.,,1.0
+4,9,Directed,14,blocks.Block and blocks.BlockHeader are subclasses of rlp.Serializable,,1.0
+9,8,Directed,15,blocks.Block and blocks.BlockHeader are subclasses of rlp.Serializable,,1.0
+8,9,Directed,16,on blocks.Block init,,1.0
+9,10,Directed,17,the block is checked for consistency the transactions are executed to update the state,,3.0
+10,11,Directed,18,transactions are validated sender account nonce increased gas is checked and handled a message to the account and call data are prepared the message is applied value is transfered the vm invoked,,9.0
+11,10,Directed,20,read / writes to the state and limited access to the external environment is provided by the VmExt class,,2.0
+10,9,Directed,21,"writes (state updates) are cached and journaled, so they can be reverted if the tx is invalid",,1.0
+9,10,Directed,22,"if the message could successfully be applied, the transaction is valid",,1.0
+10,9,Directed,23,the state is committed,,1.0
+9,10,Directed,24,the transaction added to the list of txs of the block:,,1.0
+10,9,Directed,25,"after all transactions are applied, the block is finalized:",,1.0
+9,6,Directed,27,the block with its resulting state is verified,,3.0
+6,13,Directed,28,"If everything worked, we are back in ChainService and add the block to the chain",,3.0
+13,9,Directed,29,here we validate the uncles,,2.0
+9,13,Directed,30,do another verification,,1.0
+13,12,Directed,31,update the index; store the block,,7.0
+12,14,Directed,32,store the block,,3.0
+14,13,Directed,33,update the head of the chain,,1.0
+13,12,Directed,34,update the head of the chain; update the head candidate (i.e. the block we are mining on and are adding new txs to),,7.0
+12,14,Directed,36,finally commit,,1.0
