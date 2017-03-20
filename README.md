@@ -1,4 +1,4 @@
-﻿# Forging Blockchains: Spatial Production and Political Economy of Decentralized Cryptocurrency Code/Spaces
+﻿#Forging Blockchains: Spatial Production and Political Economy of Decentralized Cryptocurrency Code/Spaces
 
 ### Forjar Cadenas de Bloqueo: Producción Espacial y Economía Política de la Criptocurrencia Escentralizada Código/Espacios
 
