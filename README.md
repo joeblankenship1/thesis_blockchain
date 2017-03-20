@@ -1,6 +1,6 @@
-﻿## Forging Blockchains: Spatial Production and Political Economy of Decentralized Cryptocurrency Code/Spaces
+# Forging Blockchains: Spatial Production and Political Economy of Decentralized Cryptocurrency Code/Spaces
 
-### Forjar Cadenas de Bloqueo: Producción Espacial y Economía Política de la Criptocurrencia Escentralizada Código/Espacios
+Forjar Cadenas de Bloqueo: Producción Espacial y Economía Política de la Criptocurrencia Escentralizada Código/Espacios
 
 These are the data analysis scripts I created for my Master's thesis in geography. I created the Reddit scraper using Scrapy and used Jupyter Notebook to analyzed the data.
 
