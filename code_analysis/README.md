@@ -1,4 +1,4 @@
-﻿# Pyethereum Code Walk-through Analysis
+﻿#Pyethereum Code Walk-through Analysis
 
 Parsing the Docstring from the source code was done in Jupyter Notebook using Python 3.5. The node/edge files and the resulting graph were created in Gephi 0.9.1.
 

@@ -1,6 +1,6 @@
-﻿# 2017 Blockchain Events
+﻿#2017 Blockchain Events
 
-### 2017 Eventos de cadena de bloque
+2017 Eventos de cadena de bloque
 
 This is a map I created from a businessinsider article of the "world's best blockchain conferences and expos to attend in 2017." This article is attributed to Andrew Meola on January 16, 2017: http://www.businessinsider.com/blockchain-conferences-2017-1
 

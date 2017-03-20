@@ -1,4 +1,4 @@
-﻿# Reddit Web Scraper and Analytic Notebook
+﻿#Reddit Web Scraper and Analytic Notebook
 
 These are the tools I used to obtain the Ethereum, Bitcoin, and Ethereum Classic Subreddit data for my analysis. Scrapy was used to obtain the data (which was done within the EULA and robot.txt restrictions for Reddit). This framework uses Python 2.7. The analysis was performed in Jupyter Notebooks using Python 3.5.
 
