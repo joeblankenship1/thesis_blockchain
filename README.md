@@ -4,7 +4,7 @@ These are the [data analysis scripts](https://github.com/joeblankenship1/thesis_
 
 **Please submit issues if you think something is wrong or can be improved.**
 
-To find out more about me and my research, visit [my website](http://thejoeblankenship.com/).
+To find out more about me and my research, visit [my website](https://thejoeblankenship.com/).
 
 Forjar Cadenas de Bloqueo: Producción Espacial y Economía Política de la Criptocurrencia Escentralizada Código/Espacios
 
